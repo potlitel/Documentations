@@ -129,6 +129,8 @@ graph TB
     Repositories-- use  ---DbContext
     click BaseEntities "#base-entities"
     class BaseEntities internal-link
+    click CommonEntities "#common-entities"
+    class CommonEntities internal-link
     end
     subgraph FSA.ServiceOrder.WebApi
         AppCustomSODbContext
