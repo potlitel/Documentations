@@ -1,5 +1,29 @@
-## Domain Model
+## Concepts and base architecture for Service Orders
 
+The following document describes the bases for the implementation of a generic service order project that serves as a template for future client applications. In this way, the redefinition of common entities and functionalities between applications whose main business logic is based on service orders is avoided. This reuse is beneficial as it means writing less code and can allow the application to be standardized on a single implementation, following the Once, Once Only [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principle.
+
+## Technologies and patterns
+
+* [ASP.NET Core 9](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core)
+* [Entity Framework Core 9](https://docs.microsoft.com/en-us/ef/core/)
+* [MediatR](https://github.com/jbogard/MediatR)
+* [FluentValidation](https://fluentvalidation.net/)
+* [Vertical Slice Arch](https://learn.microsoft.com/en-us/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)
+
+## Projects breakdown
+
+The service order template is broken into 2 projects:
+
+### FSA.Core
+
+Class Library type project containing all the base entities, whether common nomenclators or entities, utilities as well as the DB context of the service orders.
+
+### FSA.Core.Server
+
+Class Library type project containing all the common logic (features) for managing service orders, includes definition of controllers with their respective routes and access permissions, definition of repositories as well as custom attributes and middlewares.
+
+## Domain Model
+### Base/common entities
 
 ```mermaid
 classDiagram
@@ -77,3 +101,5 @@ Document <|-- ServiceOrderDocument
 Document <|-- ServiceOrderTaskDocument
 
 ```
+
+## High level dependencies
