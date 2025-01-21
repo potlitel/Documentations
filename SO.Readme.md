@@ -143,3 +143,57 @@ graph TB
     end
 
 ```
+
+## Service Order Bases/Commons Entities
+
+### Bases entities
+
+##### DocumentType
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Master.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
+            <li><strong>Observations</strong>: Defines the types of documents that a service order can use. </li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderTaskState
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Master.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
+            <li><strong>Observations</strong>: Defines the states through which a service order task can go through. </li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderType
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Master.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
+            <li><strong>Observations</strong>: Defines the types of service orders for a given scenario. </li>
+        </ul></td>
+    </tr>
+</table>
+
+##### SupplyOperation
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Master.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
+            <li><strong>Observations</strong>: Defines the types of maintenance operations allowed in service orders. </li>
+        </ul></td>
+    </tr>
+</table>
+
+### Commons entities
