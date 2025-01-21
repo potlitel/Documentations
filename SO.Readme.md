@@ -127,6 +127,8 @@ graph TB
     ServiceOrderContext == has ==> CommonEntities
     ServiceOrderTask == belong to ==> CommonEntities
     Repositories-- use  ---DbContext
+    click BaseEntities "#base-entities"
+    class BaseEntities internal-link
     end
     subgraph FSA.ServiceOrder.WebApi
         AppCustomSODbContext
@@ -144,9 +146,9 @@ graph TB
 
 ```
 
-## Service Order Bases/Commons Entities
+## Service Order Base/Common Entities
 
-### Bases entities
+### Base entities
 
 ##### DocumentType
 <table  style="border: hidden;">
@@ -196,4 +198,4 @@ graph TB
     </tr>
 </table>
 
-### Commons entities
+### Common entities
