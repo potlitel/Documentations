@@ -126,14 +126,20 @@ graph TB
     ServiceOrderContext == has ==> BaseEntities
     ServiceOrderContext == has ==> CommonEntities
     ServiceOrderTask == belong to ==> CommonEntities
-    Repositories-->DbContext
+    Repositories-- use  ---DbContext
     end
     subgraph FSA.ServiceOrder.WebApi
         AppCustomSODbContext
         Migrations
         CustomServiceOrderTask
+        WebApiControllers
         AppCustomSODbContext-. inherit from .->ServiceOrderContext
         CustomServiceOrderTask-. inherit from .->ServiceOrderTask
+        WebApiControllers-- import ---ServiceOrderController
+    end
+    subgraph MSSQLServer
+        db[(fa:fa-table Database)]
+        Repositories-- persist data on ---db
     end
 
 ```
