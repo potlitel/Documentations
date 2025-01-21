@@ -103,3 +103,37 @@ Document <|-- ServiceOrderTaskDocument
 ```
 
 ## High level dependencies
+
+```mermaid
+
+graph TB
+    subgraph FSA.Core.Server
+    Repositories
+    ServiceOrderFeatures
+    IUnitOfWork
+    ServiceOrderController
+    ServiceOrderController --> ServiceOrderFeatures
+    ServiceOrderFeatures --> Repositories
+    Repositories-. inherit from .->IUnitOfWork
+    end
+    subgraph FSA.Core
+    DbContext
+    ServiceOrderTask
+    BaseEntities
+    CommonEntities
+    ServiceOrderContext
+    ServiceOrderContext-. inherit from .->DbContext
+    ServiceOrderContext == has ==> BaseEntities
+    ServiceOrderContext == has ==> CommonEntities
+    ServiceOrderTask == belong to ==> CommonEntities
+    Repositories-->DbContext
+    end
+    subgraph FSA.ServiceOrder.WebApi
+        AppCustomSODbContext
+        Migrations
+        CustomServiceOrderTask
+        AppCustomSODbContext-. inherit from .->ServiceOrderContext
+        CustomServiceOrderTask-. inherit from .->ServiceOrderTask
+    end
+
+```
