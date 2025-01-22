@@ -160,6 +160,7 @@ graph TB
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
             <li><strong>Observations</strong>: Defines the types of documents that a service order can use. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
         </ul></td>
     </tr>
 </table>
@@ -172,6 +173,7 @@ graph TB
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
             <li><strong>Observations</strong>: Defines the states through which a service order task can go through. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
         </ul></td>
     </tr>
 </table>
@@ -184,6 +186,7 @@ graph TB
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
             <li><strong>Observations</strong>: Defines the types of service orders for a given scenario. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
         </ul></td>
     </tr>
 </table>
@@ -196,8 +199,115 @@ graph TB
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
             <li><strong>Observations</strong>: Defines the types of maintenance operations allowed in service orders. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
         </ul></td>
     </tr>
 </table>
 
 ### Common entities
+
+##### ServiceOrder
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Record.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>:  Defines the main entity of this project, Service Order with its common characteristics.</li>
+            <li><strong>Important</strong>:  PUEDE SER EXTENDIDA!!!</li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderFeature
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Record.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>:  Define la entidad que almacena todas las geo features asociadas a una orden de servicio. Una feature define caulquier elemento topológico vinculado directamente con la orden de servicio.</li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderRegister
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Record.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>: Define la entidad que almacena los estados por los cuales una orden de servicio puede transitar </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderTask
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Record.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>: Definida como una entidad abstracta a implementarse directamente desde la aplicación cliente que utilize esta plantilla de ordenes de servicios, contienes las bases para definir, de conjunto con otras propiedades las tareas a realizar durante la vigencia de una orden de servicio determinada. </li>
+            <li><strong>Important</strong>:  PUEDE SER EXTENDIDA!!!</li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### Supply
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Record.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>: Define la entidad que almancena las operaciones complementarias de mantenimiento implicadas en una orden de servicio determinada. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### Document
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Record.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>: Define una entidad base que contiene las propiedades comunes que deben tener todos los documentos relacionados con ordenes de servicio. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderDocument
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Document.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>: Define la entidad que representa los documentos asociados a una orden de servicio determinada. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
+
+##### ServiceOrderTaskDocument
+<table  style="border: hidden;">
+    <tr>
+        <td><img src="images/sharp-icon-56-64x64.png"></td>
+        <td><ul>
+            <li><strong>Inherit from</strong>: Document.cs</li>
+            <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
+            <li><strong>Observations</strong>: Define la entidad que representa los documentos asociados a una tarea de una orden de servicio determinada. </li>
+            <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
+        </ul></td>
+    </tr>
+</table>
