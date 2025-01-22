@@ -214,7 +214,7 @@ graph TB
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
             <li><strong>Observations</strong>:  Defines the main entity of this project, Service Order with its common characteristics.</li>
-            <li><strong>Important</strong>:  PUEDE SER EXTENDIDA!!!</li>
+            <li><strong>Important</strong>:  This model can be extended in the client application.</li>
             <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
         </ul></td>
     </tr>
@@ -254,7 +254,7 @@ graph TB
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
             <li><strong>Observations</strong>: Defined as an abstract entity to be implemented directly from the client application that uses this service order template, it contains the bases to define, together with other properties, the tasks to be performed during the validity of a given service order.</li>
-            <li><strong>Important</strong>:  PUEDE SER EXTENDIDA!!!</li>
+            <li><strong>Important</strong>:  It must be implemented in the client application.</li>
             <li><strong>CRUD Routes</strong>:  Poner ruta de controllers</li>
         </ul></td>
     </tr>
