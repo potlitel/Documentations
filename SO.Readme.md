@@ -223,8 +223,8 @@ graph TB
 ##### ServiceOrderFeature
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="74" height="64"></td>
-        <td style="width: 90%"><ul>
+        <td style="width: 20%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
+        <td style="width: 80%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
             <li><strong>Observations</strong>:  Defines the entity that stores all the geo features associated with a service order. A feature defines any topological element linked directly to the service order.</li>
