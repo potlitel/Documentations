@@ -155,7 +155,7 @@ graph TB
 ##### DocumentType
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
@@ -168,7 +168,7 @@ graph TB
 ##### ServiceOrderTaskState
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
@@ -181,7 +181,7 @@ graph TB
 ##### ServiceOrderType
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
@@ -194,7 +194,7 @@ graph TB
 ##### SupplyOperation
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Master.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\Masters </li>
@@ -209,7 +209,7 @@ graph TB
 ##### ServiceOrder
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -223,8 +223,8 @@ graph TB
 ##### ServiceOrderFeature
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 20%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
-        <td style="width: 80%"><ul>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
+        <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
             <li><strong>Observations</strong>:  Defines the entity that stores all the geo features associated with a service order. A feature defines any topological element linked directly to the service order.</li>
@@ -236,7 +236,7 @@ graph TB
 ##### ServiceOrderRegister
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -249,7 +249,7 @@ graph TB
 ##### ServiceOrderTask
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -263,7 +263,7 @@ graph TB
 ##### Supply
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -276,7 +276,7 @@ graph TB
 ##### Document
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -289,7 +289,7 @@ graph TB
 ##### ServiceOrderDocument
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Document.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -302,7 +302,7 @@ graph TB
 ##### ServiceOrderTaskDocument
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Document.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
@@ -311,3 +311,74 @@ graph TB
         </ul></td>
     </tr>
 </table>
+
+
+## How to use
+
+### Install corresponding package. 
+
+To use this template for creating service orders, the first thing we must do is install the **FSA.Core.Server** nuget package.
+
+To install the aforementioned package we must add a custom nuget source, to do this we follow the following steps:
+
+1- Open Visual Studio, and then select Tools > Options.
+
+2- Select **NuGet Package Manager**, and then select **Package Sources**.
+
+3- Enter your feed's Name and the Source URL, put the following value https://pkgs.dev.azure.com/fsaltdaqqp/_packaging/FSA.NugetPackages%40Local/nuget/v3/index.json and then select the green (+) sign to add a new package source.
+
+4- Select **OK** when you're done.
+
+##### If you use Visual Studio Code, these are the steps to follow:
+
+Poner los pasos a seguir para adicionar un custom source de nuget desde visual studio code
+
+Once the custom nuget source is configured, we only have to install the **FSA.Core.Server** package and start invoking the functionalities that said package provides us
+
+To use the **NuGet Package Manager** to install the **FSA.Core.Server** package in Visual Studio, follow these steps:
+
+Select **Project** > **Manage NuGet Packages**.
+
+![Manage NuGet Packages](./images/ManageNugetPackage.png)
+
+In the **NuGet Package Manager** page, choose the custom package name (step 3 previously mentioned) as the **Package source**.
+
+From the Browse tab, search for ***FSA.Core.Server***, select **FSA.Core.Server** in the list, and then select **Install**.
+
+![FSA.Core.Server](./images/fsacoreserver.png)
+
+### Using the FSA.Core.Server package
+
+Once the FSA.Core.Server package is installed, you must proceed with the following steps to use its functionalities:
+
+1- Create a project using the **ASP.NET Core Web Api** visual studio template 
+
+![ASP.NET Core Web Api](./images/webapitemplate.png)
+
+   or using .NET Core CLI with the following command
+
+###### Without specifying a name:
+```cs
+dotnet new webapi
+```
+######  With a specified name:
+```cs
+dotnet new webapi --name MyFirstWebAPIProject
+```
+
+
+2- Create a class that inherits from the ServiceOrderContext class, as follows
+
+```cs
+public class AppDbContext : ServiceOrderContext
+{
+    public AppDbContext(DbContextOptions<AppDbContext> options, IHttpContextAccessorManager httpContextAccessorManager)
+        : base(options, httpContextAccessorManager)
+    {
+    }
+}
+```
+
+The ServiceOrderContext class contains all the DBSets with the common collections for working with service orders, this saves time declaring/implementing functionalities.
+
+2- 
