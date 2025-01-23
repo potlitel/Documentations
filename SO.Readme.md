@@ -223,7 +223,7 @@ graph TB
 ##### ServiceOrderFeature
 <table  style="border: hidden;">
     <tr>
-        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png"></td>
+        <td style="width: 10%"><img src="images/sharp-icon-56-64x64.png" width="64" height="64"></td>
         <td style="width: 90%"><ul>
             <li><strong>Inherit from</strong>: Record.cs</li>
             <li><strong>Path</strong>: FSA.Core\ServiceOrders\Models\ </li>
