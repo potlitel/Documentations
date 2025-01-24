@@ -347,6 +347,12 @@ From the Browse tab, search for ***FSA.Core.Server***, select **FSA.Core.Server*
 
 ![FSA.Core.Server](./images/fsacoreserver.png)
 
+> [!IMPORTANT]  
+> Don't forget to install the following packages:
+>- [Microsoft.EntityFrameworkCore.SqlServer](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer)
+>- [Microsoft.EntityFrameworkCore.Tools](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Tools)
+
+
 ### Using the FSA.Core.Server package
 
 Once the FSA.Core.Server package is installed, you must proceed with the following steps to use its functionalities:
@@ -366,8 +372,25 @@ dotnet new webapi
 dotnet new webapi --name MyFirstWebAPIProject
 ```
 
+2- Create a class that implements the abstract class ServiceOrderTask, this new class would extend the abstract class by incorporating new members.
 
-2- Create a class that inherits from the ServiceOrderContext class, as follows
+```cs
+public class CustomServiceOrderTask : ServiceOrderTask
+{
+    public string CustomFieldSOTask { get; set; } = string.Empty;
+}
+```
+
+3- Another class that can be extended is the ServiceOrder model, for this we create a new class that inherits from the aforementioned model and that will have its own members.
+
+```cs
+public class CustomServiceOrder: ServiceOrder
+{
+    public int CustomField { get; set; }
+}
+```
+
+4- Create a class that inherits from the ServiceOrderContext class, as follows
 
 ```cs
 public class AppDbContext : ServiceOrderContext
@@ -376,9 +399,82 @@ public class AppDbContext : ServiceOrderContext
         : base(options, httpContextAccessorManager)
     {
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<CustomServiceOrderTask>();
+
+        modelBuilder.Entity<ServiceOrderTask>()
+        .HasDiscriminator<string>("TypeEntity")
+        .HasValue<CustomServiceOrderTask>("CustomServiceOrderTask");
+
+        modelBuilder.Entity<CustomServiceOrder>(e =>
+        {
+        });
+    }
 }
 ```
 
 The ServiceOrderContext class contains all the DBSets with the common collections for working with service orders, this saves time declaring/implementing functionalities.
 
-2- 
+5- The values ​​for the connection string are specified in the 'appSettings.json' file
+
+```cs
+"ConnectionStrings": {
+  "DBConnection": "Server=server;Database=db;User Id=user;Password=password;TrustServerCertificate=True"
+}
+```
+
+6- Using the following instruction, the first migration is created to specify our tables in the database
+
+```cs
+Add-Migration InitialCreate -p WebApplication1 -c AppDbContext -o Data/Migrations -s WebApplication1
+```
+where:
+
+- -p: Project name
+- -c: Context name
+- -o: Output path
+- -s: Solution name
+
+7- The following code blocks are specified in the **Program.cs** class
+
+The following code block must be specified just before the line **var app = builder.Build();** in the **Program.cs** class
+
+```cs
+#region FSA CoreServer
+builder.Services.AddFSACoreServerServices(builder.Configuration);
+builder.Services.AddFSASwaggerDocumentationServices("FSA ServiceOrders Test Api", "v1");
+builder.Services.AddFSAServiceOrderDbContext<AppDbContext>(options =>
+{
+options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")); 
+//It must match the name previously specified in the appSettings.json file. En este caso 'DBConnection'.
+});
+builder.Services.AddFSAServiceOrderFeaturesServices();
+#endregion
+
+builder.Services.AddAntiforgery();
+```
+And just below the app.UseHttpsRedirection(); line, the following block is specified
+
+```cs
+#region FSA CoreServer
+
+await app.Services.InitialiseDatabaseAsync<AppDbContext>();
+app.UseFSACoreServerServices();
+app.MapFSAServiceOrderRoutes();
+
+app.UseAntiforgery();
+
+#endregion
+```
+
+8- Finally, we run the web api project. If we don't have any errors, we should have our API project running. If we access our database we can verify that our DB with all the tables related to service orders have been created.
+
+![Base de datos lista para usar](./images/DBReadyToUse.png)
+
+And we verify that for the particular case of the ServiceOrderTask and ServiceOrder models that were extended with new members, these have been created.
+
+| Service Order extended model                                | Service Order Task extended model                           |
+| ![Base de datos lista para usar](./images/CFServiceOrder.png) | ![Base de datos lista para usar](./images/CFServiceOrderTask.png) |
+|-------------------------------------------------------------|:------------------------------------------------------------|
