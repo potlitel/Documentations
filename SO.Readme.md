@@ -475,6 +475,6 @@ app.UseAntiforgery();
 
 And we verify that for the particular case of the ServiceOrderTask and ServiceOrder models that were extended with new members, these have been created.
 
-| Service Order extended model                                | Service Order Task extended model                           |
-| ![Base de datos lista para usar](./images/CFServiceOrder.png) | ![Base de datos lista para usar](./images/CFServiceOrderTask.png) |
-|-------------------------------------------------------------|:------------------------------------------------------------|
+| Service Order extended model    | Service Order Task extended model  |
+| :--------: | :-------: |
+| ![Base de datos lista para usar](./images/CFServiceOrder.png)  | ![Base de datos lista para usar](./images/CFServiceOrderTask.png)    |
