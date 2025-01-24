@@ -373,7 +373,7 @@ dotnet new webapi --name MyFirstWebAPIProject
 ```
 
 2- Create a class that implements the abstract class ServiceOrderTask, this new class would extend the abstract class by incorporating new members.
-
+<a id="third-heading2"></a>
 ```cs
 public class CustomServiceOrderTask : ServiceOrderTask
 {
@@ -382,7 +382,7 @@ public class CustomServiceOrderTask : ServiceOrderTask
 ```
 
 3- Another class that can be extended is the ServiceOrder model, for this we create a new class that inherits from the aforementioned model and that will have its own members.
-
+<a id="third-heading1"></a>
 ```cs
 public class CustomServiceOrder: ServiceOrder
 {
@@ -475,6 +475,6 @@ app.UseAntiforgery();
 
 And we verify that for the particular case of the ServiceOrderTask and ServiceOrder models that were extended with new members, these have been created.
 
-| Service Order extended model    | Service Order Task extended model  |
+| [Service Order extended model](#third-heading1)    | [Service Order Task extended model](#third-heading2)  |
 | :--------: | :-------: |
 | ![Base de datos lista para usar](./images/CFServiceOrder.png)  | ![Base de datos lista para usar](./images/CFServiceOrderTask.png)    |
